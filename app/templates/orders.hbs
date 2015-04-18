@@ -1,5 +1,9 @@
 <ul>
-{{#each item in controller}}
-  <li>{{item.box_id}} starting on {{item.start_date}}</li>
-{{/each}}
+  {{#each order in orders}}
+    <li>{{#link-to 'orders.edit' order.id class="btn btn-primary"}}Order {{order.id}}{{/link-to}} with box {{order.box_id}} starting on {{order.start_date}}</li>
+  {{else}}
+    No active orders.
+  {{/each}}
 </ul>
+
+<button {{action 'expand'}}>Show More...</button>

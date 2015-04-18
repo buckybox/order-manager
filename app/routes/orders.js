@@ -3,7 +3,7 @@ import $ from 'jquery';
 import config from './../config/environment';
 
 export default Ember.Route.extend({
-  model: function(params) {
+  model: function() {
     return $.ajax({
       type: "GET",
       url: 'http://api.buckybox.local:3000/v1/orders?customer_id=639', // FIXME

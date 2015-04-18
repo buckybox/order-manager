@@ -1,4 +1,15 @@
-<h1>{{appName}}</h1>
-<h2 id="title">{{title}}</h2>
+<header>
+  <h1>{{appName}}</h1>
+  <h2 id="title">{{title}}</h2>
+</header>
 
-{{outlet}}
+{{#link-to 'index'}}Root{{/link-to}}
+
+<div>
+  {{outlet}}
+</div>
+
+<footer>
+  &copy; Bucky Box 2016!
+</footer>
+
