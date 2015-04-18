@@ -2,6 +2,19 @@
 
 module.exports = function(environment) {
   var ENV = {
+    apiKey: 'XXX',
+    apiSecret: 'XXX',
+    webstoreId: 'fantastic-vege-people',
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' customer.buckybox.local:35729 api.buckybox.com",
+      // 'font-src': "'self' data: use.typekit.net",
+      'connect-src': "'self' localhost ws://customer.buckybox.local:35729 api.buckybox.local:3000 api.buckybox.com",
+      // 'img-src': "'self' www.facebook.com p.typekit.net",
+      'style-src': "'self' 'unsafe-inline' http://customer.buckybox.local:4200",
+    },
+
     modulePrefix: 'order-manager',
     environment: environment,
     baseURL: '/',
